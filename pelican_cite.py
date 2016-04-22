@@ -50,6 +50,8 @@ class Style(UnsrtStyle):
         self.format_labels = self.label_style.format_labels
         self.sort = self.sorting_style.sort
         self.abbreviate_names = abbreviate_names
+    def format_electronic(self,e):
+        return self.format_misc(e)
 
 
 logger = logging.getLogger(__name__)
