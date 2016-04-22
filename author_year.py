@@ -165,10 +165,10 @@ class LabelStyle(BaseLabelStyle):
                         result += "et al. "
                     else:
                         result += _strip_nonalnum(
-                            person.prelast(abbr=True) + [' '] + person.last())
+                            person.prelast_names + [' '] + person.last())
                 else:
                     result += _strip_nonalnum(
-                        person.prelast(abbr=True) + [' '] + person.last())
+                        person.prelast_names + [' '] + person.last())
                 if numnames == 2 and nameptr == 1:
                     result += ' and '
                 else:
@@ -180,5 +180,5 @@ class LabelStyle(BaseLabelStyle):
         else:
             person = persons[0]
             result = _strip_nonalnum(
-                person.prelast(abbr=True) + [' '] + person.last())
+                person.prelast_names + [' '] + person.last())
         return result
